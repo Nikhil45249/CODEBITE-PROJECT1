@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigShield | Select Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            /* Darkest Navy */
+            color: white;
+        }
+
+        .portal-card {
+            background-color: rgba(15, 23, 42, 0.3);
+            /* Slate 900 tint */
+            border: 1px solid #1e293b;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .portal-card:hover {
+            border-color: #14b8a6;
+            /* Teal 500 */
+            background-color: rgba(20, 184, 166, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .icon-box-admin {
+            background-color: rgba(20, 184, 166, 0.1);
+            color: #14b8a6;
+        }
+
+        .icon-box-rider {
+            background-color: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
+
+    <!-- HEADER LOGO SECTION -->
+    <div class="text-center mb-12">
+        <div
+            class="inline-flex items-center justify-center w-16 h-16 rounded-2xl border-2 border-teal-500/30 bg-teal-500/10 mb-4">
+            <i data-lucide="shield" class="w-8 h-8 text-teal-500"></i>
+        </div>
+        <h1 class="text-4xl font-bold tracking-tight">GigShield</h1>
+        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mt-2">Parametric Insurance Platform</p>
+    </div>
+
+    <!-- INSTRUCTION TEXT -->
+    <p class="text-gray-500 text-sm mb-8">Select your portal to continue</p>
+
+    <!-- PORTAL SELECTION CARDS -->
+    <div class="w-full max-w-lg space-y-4">
+
+        <!-- ADMIN LOGIN CARD -->
+        <a href="admin_login.html" class="portal-card flex items-center justify-between p-6 rounded-2xl">
+            <div class="flex items-center space-x-6">
+                <div class="icon-box-admin p-4 rounded-xl">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold">Admin Login</h3>
+                    <p class="text-xs text-gray-500 mt-1">Manage risk pools, zones, fraud & payouts</p>
+                </div>
+            </div>
+            <i data-lucide="chevron-right" class="w-5 h-5 text-gray-700"></i>
+        </a>
+
+        <!-- RIDER PORTAL CARD -->
+        <a href="rider_auth.html" class="portal-card flex items-center justify-between p-6 rounded-2xl">
+            <div class="flex items-center space-x-6">
+                <div class="icon-box-rider p-4 rounded-xl">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold">Rider Portal</h3>
+                    <p class="text-xs text-gray-500 mt-1">New rider? Sign up. Returning? Log in.</p>
+                </div>
+            </div>
+            <i data-lucide="chevron-right" class="w-5 h-5 text-gray-700"></i>
+        </a>
+
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
